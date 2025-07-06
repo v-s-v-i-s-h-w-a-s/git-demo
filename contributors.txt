@@ -1,0 +1,15 @@
+# Workshop Contributors
+
+This file tracks all the awesome people who have contributed to this workshop repository!
+
+## Instructions for Students:
+1. Fork this repository
+2. Clone your fork locally
+3. Add your name below in the format: "- Your Name (@your-github-username)"
+4. Commit and push your changes
+5. Create a pull request back to the original repository
+
+## Contributors List:
+- Instructor (@v-s-v-i-s-h-w-a-s)
+
+<!-- Students will add their names here -->

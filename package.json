@@ -1,0 +1,47 @@
+{
+  "name": "workshop-demo-repo",
+  "version": "1.0.0",
+  "description": "Demo repository for Git, GitHub, and GitHub Actions workshop",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix",
+    "build": "echo 'Building application...' && mkdir -p dist && cp src/*.js dist/",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "workshop",
+    "ci-cd",
+    "education"
+  ],
+  "author": "Workshop Instructor",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  }
+}
