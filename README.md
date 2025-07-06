@@ -22,8 +22,8 @@ This repository is designed for **hands-on learning** of version control and CI/
 2. Clone your fork to your local machine:
 
    ```bash
-   git clone https://github.com/v-s-v-i-s-h-w-a-s/git-demo.git
-   cd git-demo
+   git clone https://github.com/YOUR-STUDENT-USERNAME/git-demo-repo.git
+   cd git-demo-repo
    ```
 
 3. Add your name to the `contributors.txt` file.
