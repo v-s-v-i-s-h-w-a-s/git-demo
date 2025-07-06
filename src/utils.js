@@ -23,13 +23,13 @@ function calculateAge(birthYear) {
   if (!birthYear || typeof birthYear !== 'number') {
     throw new Error('Birth year must be a number');
   }
-  
+
   const currentYear = new Date().getFullYear();
-  
+
   if (birthYear > currentYear) {
     throw new Error('Birth year cannot be in the future');
   }
-  
+
   return currentYear - birthYear;
 }
 
@@ -42,7 +42,7 @@ function formatDate(date) {
   if (!(date instanceof Date)) {
     throw new Error('Input must be a Date object');
   }
-  
+
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
