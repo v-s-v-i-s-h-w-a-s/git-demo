@@ -95,16 +95,16 @@ This workflow:
 
 | Feature / Aspect         | GitHub Actions                              | Jenkins                                       |
 | ------------------------ | ------------------------------------------- | --------------------------------------------- |
-| 🏗️ **Setup**            | Built-in to GitHub, no server needed        | Requires separate server installation         |
-| 🌐 **UI & Integration**  | Native GitHub UI                            | Web UI with many plugins                      |
-| ⚙️ **Configuration**     | YAML file in the repository                 | Groovy or scripted in Jenkinsfiles            |
-| 🔄 **Triggering Events** | GitHub-native events (push, PR, etc.)       | SCM hooks or cron jobs                        |
-| 🔌 **Plugins / Actions** | Marketplace for reusable actions            | Massive plugin ecosystem                      |
-| 💻 **Runners / Agents**  | GitHub-hosted or self-hosted runners        | Self-hosted agents required                   |
-| 🚀 **Ease of Use**       | Beginner-friendly, integrates out of box    | Requires setup, more flexible for enterprises |
-| 💰 **Cost for CI/CD**    | Free tier available (2,000 mins/month)      | Free and open source (infrastructure needed)  |
-| ☁️ **Cloud Integration** | Seamless with GitHub, supports cloud deploy | Supports multiple cloud providers             |
-| 🔐 **Security Model**    | GitHub permissions + secrets                | Complex roles; sensitive to misconfiguration  |
+| **Setup**            | Built-in to GitHub, no server needed        | Requires separate server installation         |
+| **UI & Integration**  | Native GitHub UI                            | Web UI with many plugins                      |
+| **Configuration**     | YAML file in the repository                 | Groovy or scripted in Jenkinsfiles            |
+| **Triggering Events** | GitHub-native events (push, PR, etc.)       | SCM hooks or cron jobs                        |
+| **Plugins / Actions** | Marketplace for reusable actions            | Massive plugin ecosystem                      |
+| **Runners / Agents**  | GitHub-hosted or self-hosted runners        | Self-hosted agents required                   |
+| **Ease of Use**       | Beginner-friendly, integrates out of box    | Requires setup, more flexible for enterprises |
+| **Cost for CI/CD**    | Free tier available (2,000 mins/month)      | Free and open source (infrastructure needed)  |
+| **Cloud Integration** | Seamless with GitHub, supports cloud deploy | Supports multiple cloud providers             |
+| **Security Model**    | GitHub permissions + secrets                | Complex roles; sensitive to misconfiguration  |
 
 ---
 
