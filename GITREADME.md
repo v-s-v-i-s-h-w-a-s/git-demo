@@ -90,6 +90,60 @@ This workflow:
 * Builds the application
 
 ---
+# CI/CD Pipeline: GitHub Actions vs Jenkins
+
+This guide provides a **side-by-side comparison** of how a basic CI/CD pipeline is written and executed in **GitHub Actions** and **Jenkins**.
+
+## Scenario
+
+We’ll create a simple CI/CD pipeline that:
+
+1. Triggers on code push
+2. Installs dependencies
+3. Runs linting
+4. Runs tests
+5. Deploys (simulated or real)
+
+---
+
+## Project Setup
+
+* **Language:** Python
+* **Package Manager:** pip
+* **Lint Tool:** flake8
+* **Test Tool:** pytest
+* **Deploy Step:** Print deployment command or simulate deploy
+
+---
+
+## CI/CD Pipeline Comparison (Code + Explanation)
+
+| Step                     | GitHub Actions (Code)                                                               | Jenkins (Code)                                                                         | Explanation                                                                                      |                                         |
+| ------------------------ | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------- |
+| **Trigger**              | `yaml\non:\n  push:\n    branches: [main]\n  pull_request:\n    branches: [main]\n` | `groovy\npipeline {\n  agent any\n  stages { ... }\n}\n`                               | GitHub uses `on:` to define triggers. Jenkins defines them via webhook or polling configuration. |                                         |
+| **Checkout Code**        | `yaml\n- uses: actions/checkout@v4\n`                                               | `groovy\ncheckout scm\n`                                                               | Both pull code from the source control system.                                                   |                                         |
+| **Set Up Python**        | `yaml\n- uses: actions/setup-python@v5\n  with:\n    python-version: '3.11'\n`      | `groovy\nsh 'pyenv install -s $PYTHON_VERSION'\nsh 'pyenv global $PYTHON_VERSION'\n`   | GitHub uses a reusable action. Jenkins installs manually using shell.                            |                                         |
+| **Install Dependencies** | \`\`\`yaml\n- run:                                                                  | \n    python -m pip install --upgrade pip\n    pip install -r requirements.txt\n\`\`\` | `groovy\nsh 'python -m pip install --upgrade pip'\nsh 'pip install -r requirements.txt'\n`       | Both install Python packages using pip. |
+| **Linting**              | `yaml\n- run: flake8 .\n`                                                           | `groovy\nsh 'flake8 .'\n`                                                              | Linting ensures code quality and formatting compliance.                                          |                                         |
+| **Run Tests**            | `yaml\n- run: pytest\n`                                                             | `groovy\nsh 'pytest'\n`                                                                | Executes tests written in pytest.                                                                |                                         |
+| **Deploy (Simulated)**   | `yaml\n- run: echo "Deploying..."\n  if: github.ref == 'refs/heads/main'\n`         | `groovy\nwhen { branch 'main' }\nsteps { echo 'Deploying application...' }\n`          | Simulates deployment for main branch. Conditional in both systems.                               |                                         |
+
+---
+
+## Comparison Summary
+
+| Feature               | GitHub Actions                              | Jenkins                                     |
+| --------------------- | ------------------------------------------- | ------------------------------------------- |
+| **Hosted By**         | GitHub                                      | Self-hosted or via Jenkins server           |
+| **Pipeline Format**   | YAML (`.yml`)                               | Groovy-like syntax (`Jenkinsfile`)          |
+| **Trigger Mechanism** | `on: push`, `on: pull_request`              | `when { branch 'main' }`                    |
+| **Environment Setup** | `uses: actions/setup-python`                | Manual with `pyenv` or OS-installed Python  |
+| **Steps Declaration** | Under `jobs > steps`                        | Under `stages > stage > steps`              |
+| **Secrets Handling**  | GitHub Secrets                              | Jenkins Credentials plugin                  |
+| **Integration**       | Tightly integrated into GitHub repositories | Integrates with any SCM (Git, GitHub, etc.) |
+| **UI Feedback**       | GitHub Actions UI in PRs and commits        | Jenkins UI (dashboard and job history)      |
+
+---
 
 ## GitHub Actions vs Jenkins
 
