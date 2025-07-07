@@ -92,7 +92,7 @@ This workflow:
 ---
 # CI/CD Pipeline: GitHub Actions vs Jenkins
 
-This guide provides a **side-by-side comparison** of how a basic CI/CD pipeline is written and executed in **GitHub Actions** and **Jenkins**.
+A **side-by-side comparison** of how a basic CI/CD pipeline is written and executed in **GitHub Actions** and **Jenkins**.
 
 ## Scenario
 
