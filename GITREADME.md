@@ -1,4 +1,4 @@
-# Introduction to GitHub and GitHub Actions
+# Introduction to GitHub and GitHub Actions FDP
 
 This README provides a foundational understanding of **GitHub**, **GitHub Actions**, and how they work together to enable **CI/CD automation**. It also compares **GitHub Actions** with **Jenkins**, a popular CI/CD alternative.
 
